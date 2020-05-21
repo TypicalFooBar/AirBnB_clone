@@ -11,7 +11,7 @@ class BaseModel:
         return "[{}] ({}) {}".format(className, self.id, self.__dict__)
 
     def save(self):
-        self.update_at = datetime.today()
+        self.updated_at = datetime.today()
 
     def to_dict(self):
         dictCopy = self.__dict__.copy()
