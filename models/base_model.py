@@ -4,14 +4,14 @@ from datetime import datetime
 class BaseModel:
     def __init__(self):
         self.id = str(uuid4())
-        self.created_at = self.update_at = datetime.isoformat()
+        self.created_at = self.update_at = datetime.today().isoformat()
 
     def __str__(self):
         className = self.__class__.__name__
         return "[{}] ({}) {}".format(className, self.id, self.__dict__)
 
     def save(self):
-        self.update_at = datetime.isoformat()
+        self.update_at = datetime.today().isoformat()
 
     def to_dict(self):
         dictCopy = self.__dict__.copy()
