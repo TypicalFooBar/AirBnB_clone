@@ -3,7 +3,7 @@ from datetime import datetime
 
 class BaseModel:
     def __init__(self, *args, **kwargs):
-        if kwargs is not None:
+        if len(kwargs) is not 0:
             for key, value in kwargs.items():
                 if key is not "__class__":
                     if key is "created_at" or key is "updated_at":
