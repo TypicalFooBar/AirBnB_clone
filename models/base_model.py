@@ -7,7 +7,7 @@ class BaseModel:
             for key, value in kwargs.items():
                 if key is not "__class__":
                     if key is "created_at" or key is "updated_at":
-                        self.__dict__[key] = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S%z")
+                        self.__dict__[key] = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
                     else:
                         self.__dict__[key] = value
         else:
