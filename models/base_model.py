@@ -4,7 +4,7 @@ from datetime import datetime
 class BaseModel:
     def __init__(self):
         self.id = str(uuid4())
-        self.created_at = self.update_at = datetime.today()
+        self.created_at = self.updated_at = datetime.today()
 
     def __str__(self):
         className = self.__class__.__name__
