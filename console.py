@@ -1,8 +1,10 @@
 #!/usr/bin/python3
+""" Documentation """
 
 import cmd
 
 class HBNBCommand(cmd.Cmd):
+    """ Documentation """
     prompt = '(hbnb) '
 
     def do_quit(self, arg):
