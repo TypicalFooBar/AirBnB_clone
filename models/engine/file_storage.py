@@ -1,4 +1,5 @@
 import json
+from models.base_model import BaseModel
 
 class FileStorage:
     __file_path = 'file.json'
@@ -30,6 +31,6 @@ class FileStorage:
                 jsonObject = json.load(f)
 
                 for key in jsonObject:
-                    self.__objects[key] = jsonObject[key]
+                    self.__objects[key] = BaseModel(jsonObject[key])
         except:
             pass
