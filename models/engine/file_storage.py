@@ -14,7 +14,11 @@ class FileStorage:
         self.__objects["{}.{}".format(obj.__class__.__name__, obj.id)] = obj
 
     def save(self):
-        jsonText = json.dumps(self.__objects)
+        jsonObject = {}
+        for key in self.__objects:
+            jsonObject[key] = self.__objects[key].to_dict()
+
+        jsonText = json.dumps(jsonObject)
 
         with open(self.__file_path, "w") as f:
             f.write(jsonText)
