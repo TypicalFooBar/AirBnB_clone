@@ -26,8 +26,8 @@ class BaseModel:
 
     def to_dict(self):
         dictCopy = self.__dict__.copy()
-        dictCopy["created_at"] = self.created_at.isoformat()
-        dictCopy["updated_at"] = self.updated_at.isoformat()
+        dictCopy["created_at"] = dictCopy["created_at"].strftime("%Y-%m-%dT%H:%M:%S.%f")
+        dictCopy["updated_at"] = dictCopy["updated_at"].strftime("%Y-%m-%dT%H:%M:%S.%f")
         dictCopy["__class__"] = self.__class__.__name__
 
         return dictCopy
