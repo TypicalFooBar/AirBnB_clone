@@ -60,9 +60,9 @@ class HBNBCommand(cmd.Cmd):
                 else:
                     print("** no instance found **")
             else:
-                print ("* instance id missing **")
+                print ("** instance id missing **")
         else:
-            print ("** class doesn't exit **")
+            print ("** class doesn't exist **")
 
     def do_destroy(self, arg):
         """ Removes an object referenced by ID """
