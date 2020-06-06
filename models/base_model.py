@@ -13,7 +13,7 @@ class BaseModel:
                         self.__dict__[key] = value
         else:
             self.id = str(uuid4())
-            self.created_at = self.updated_at = datetime.today()
+            self.created_at = self.updated_at = datetime.now()
             models.storage.new(self)
 
     def __str__(self):
@@ -21,7 +21,7 @@ class BaseModel:
         return "[{}] ({}) {}".format(className, self.id, self.__dict__)
 
     def save(self):
-        self.updated_at = datetime.today()
+        self.updated_at = datetime.now()
         models.storage.save()
 
     def to_dict(self):
