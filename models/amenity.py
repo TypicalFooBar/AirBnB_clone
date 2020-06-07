@@ -2,12 +2,9 @@
 
 from models.base_model import BaseModel
 
-class User(BaseModel):
+class Amenity(BaseModel):
     """ Documentation """
-    email = ''
-    password = ''
-    first_name = ''
-    last_name = ''
+    name = ''
 
     def __init__(self, *args, **kwargs):
         """ Construct new object """
