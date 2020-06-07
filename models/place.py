@@ -2,7 +2,7 @@
 
 from models.base_model import BaseModel
 
-class Amenity(BaseModel):
+class Place(BaseModel):
     """ Documentation """
     city_id = ''
     user_id = ''
