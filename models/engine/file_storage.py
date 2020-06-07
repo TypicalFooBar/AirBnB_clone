@@ -37,6 +37,6 @@ class FileStorage:
                 jsonObject = json.load(f)
 
                 for key in jsonObject:
-                    self.__objects[key] = classes[jsonObject[key]](**jsonObject[key])
+                    self.__objects[key] = classes[jsonObject[key]["__class__"]](**jsonObject[key])
         except:
             pass
