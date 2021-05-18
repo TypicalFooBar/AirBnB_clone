@@ -1,0 +1,121 @@
+.filters {
+	background-color: white;
+	height: 70px;
+	width: 100%;
+	border: 1px;
+	border-radius: 4px;
+	border-style: solid;
+	border-color: #DDDDDD;
+	
+	/* Add after adding the button */
+	display: flex;
+}
+
+button {
+	font-size: 18px;
+	border: none;
+	border-radius: 4px;
+	margin-right: 30px;
+	background-color: #ff5a5f;
+	color: #ffffff;
+	height: 48px;
+	width: 20%;
+
+	/* To get it aligned right and center */
+	margin-left: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+button:hover {
+	opacity: .9;
+}
+
+.locations {
+	height: 100%;
+	border-right: 1px solid #dddddd;
+	border-top: none;
+	border-bottom: none;
+	border-left: none;
+	width: 25%;
+
+	/* Do this when trying to figure out how to align them like the image */
+	/* Remove this in task 6 */
+	/* padding-left: 30px; */
+}
+
+.amenities {
+	height: 100%;
+	width: 25%;
+
+	/* Do this when trying to figure out how to align them like the image */
+	/* Remove this in task 6 */
+	/* padding-left: 30px; */
+}
+
+h3 {
+	font-weight: 600;
+
+	/* Do this when trying to figure out how to align them like the image */
+	margin-bottom: 0px;
+
+	/* Add this in task 6 */
+	margin-left: 30px;
+}
+
+h4 {
+	font-weight: 400;
+	font-size: 14px;
+
+	/* Do this when trying to figure out how to align them like the image */
+	margin-top: 0px;
+
+	/* Add this in task 6 */
+	margin-left: 30px;
+}
+
+.popover {
+	display: none;
+	background-color: #fafafa;
+	
+	/* This one will seem to make sense, but then remove it and just use the padding: 30px */
+	/* width: 100%; */
+	
+	border: 1px solid #dddddd;
+	border-radius: 4px;
+
+	/* Add this after tweaking with the margin/padding/width */
+	padding-left: 30px;
+
+	/* Add when you notice the extra space around the items */
+	padding-bottom: 30px;
+	padding-top: 30px;
+}
+
+.popover h2 {
+	font-size: 16px;
+}
+
+.popover li {
+	list-style: none;
+
+	/* Add when noticing that there is more space between items */
+	margin-bottom: 5px;
+}
+
+/* Do this when things don't line up between the two popovers */
+/* Use chrome dev tools to copy the selector to find this specific one */
+/* This will only affect the first li child in the popover, then the direct h2 in there */
+.popover li:nth-child(1) > h2 {
+	margin-top: 0px;
+}
+
+/* This will show the locations popover when locations is hovered */
+.locations:hover > .popover {
+	display: block;
+}
+
+/* This will show the amenities popover when amenities is hovered */
+.amenities:hover > .popover {
+	display: block;
+}
