@@ -113,9 +113,15 @@ h4 {
 /* This will show the locations popover when locations is hovered */
 .locations:hover > .popover {
 	display: block;
+	
+	/* Do this is task 7 */
+	position: relative;
 }
 
 /* This will show the amenities popover when amenities is hovered */
 .amenities:hover > .popover {
 	display: block;
+
+	/* Do this is task 7 */
+	position: relative;
 }

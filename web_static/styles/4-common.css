@@ -15,4 +15,7 @@ body {
 	display: flex; /* I do not think this is needed */
 	margin-left: auto;
 	margin-right: auto;
+
+	/* Add in task 7 */
+	flex-direction: column;
 }
